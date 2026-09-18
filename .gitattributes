@@ -1,0 +1,25 @@
+# Line-ending policy.
+#
+# Windows' default (core.autocrlf=true) converts everything to CRLF on checkout,
+# which breaks two things in this repository:
+#
+#   1. benchmarks/simulator/adb is a POSIX `sh` shim. A CRLF shebang line makes
+#      it unrunnable on Linux and macOS, which is where CI runs.
+#   2. Normalising once here stops every cross-platform checkout from showing
+#      the entire tree as modified.
+#
+# Store LF in the repository; check out LF everywhere except Windows batch files.
+
+* text=auto eol=lf
+
+# Windows batch files must be CRLF to be executed by cmd.exe.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# The POSIX adb shim is executed by sh and must keep LF.
+benchmarks/simulator/adb text eol=lf
+
+# Binary assets are left alone.
+*.png binary
+*.jpg binary
+*.pdf binary

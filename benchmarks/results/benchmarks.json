@@ -1,0 +1,1126 @@
+{
+  "environment": {
+    "generated_at": "2026-09-18T13:27:07+00:00",
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "device_latency_ms": 25
+  },
+  "benchmarks": {
+    "classification": {
+      "device_corpus": {
+        "corpus": "simulated Samsung-class Android 13 handset",
+        "packages_total": 154,
+        "packages_safe_to_disable": 91,
+        "legacy": {
+          "tp": 8,
+          "fp": 3,
+          "fn": 83,
+          "precision": 0.7273,
+          "recall": 0.0879,
+          "f1": 0.1569,
+          "tn": 60,
+          "accuracy": 0.4416,
+          "predicted": 11
+        },
+        "new": {
+          "tp": 91,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tn": 63,
+          "accuracy": 1.0,
+          "predicted": 91
+        },
+        "legacy_false_positives": [
+          "com.analytics.dashboard.pro",
+          "com.duosecurity.duomobile",
+          "com.samsung.android.game.partner"
+        ],
+        "legacy_false_negatives_count": 83,
+        "legacy_false_negatives_sample": [
+          "com.amazon.appmanager",
+          "com.amazon.kindle",
+          "com.amazon.mShop.android.shopping",
+          "com.android.partnerbrowsercustomizations",
+          "com.android.traceur",
+          "com.att.dh",
+          "com.booking",
+          "com.carrier.iqagent",
+          "com.ebay.mobile",
+          "com.google.android.apps.docs",
+          "com.google.android.apps.maps",
+          "com.google.android.apps.podcasts",
+          "com.google.android.apps.tachyon",
+          "com.google.android.apps.tachyon.telemetry",
+          "com.google.android.apps.youtube.music",
+          "com.google.android.feedback",
+          "com.google.android.gms.location.history",
+          "com.google.android.music",
+          "com.google.android.partnersetup",
+          "com.google.android.videos"
+        ],
+        "new_classification_bands": {
+          "safe": 91,
+          "caution": 0,
+          "never": 63
+        }
+      },
+      "heldout_corpus": {
+        "corpus": "held-out corpus: package names absent from the knowledge base",
+        "packages_total": 26,
+        "legacy": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tn": 8,
+          "accuracy": 0.3077,
+          "predicted": 0
+        },
+        "new": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tn": 8,
+          "accuracy": 1.0,
+          "predicted": 18
+        },
+        "correct_by_rule": {
+          "oem-preload": 12,
+          "protected": 3,
+          "telemetry": 6,
+          "unknown-preload": 2,
+          "user-app": 3
+        },
+        "detail": [
+          {
+            "name": "com.miui.analytics",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Xiaomi",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "MIUI preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.miui.msa.global",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Xiaomi",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "MIUI preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.xiaomi.mipicks",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Xiaomi",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Xiaomi preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.oneplus.gamespace",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "OnePlus",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "OnePlus preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.oppo.quicksearchbox",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "OPPO",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "ColorOS preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.vivo.appstore",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "vivo",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "OriginOS preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.motorola.genie",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Motorola",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Motorola preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.huawei.hwid",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Huawei",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Huawei preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.hihonor.id",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Honor",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Honor preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.lge.signboard",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "LG",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "LG preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.sonyericsson.trackid",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Sony",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Sony preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.transsion.phoenix",
+            "risk": "safe",
+            "category": "oem-preload",
+            "vendor": "Transsion",
+            "score": 92,
+            "confidence": 0.9,
+            "impact": "minor",
+            "rationale": "Tecno/Infinix preload",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.acme.widget.telemetry",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'telemetry'",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.foo.bar.analytics",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'analytics'",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.baz.qux.diagmon",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'diagmon'",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.corp.metrics.crashreport",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'crashreport'",
+            "partition": "product",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.example.statsd.service",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'statsd'",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.vendor.logging.agent",
+            "risk": "safe",
+            "category": "telemetry",
+            "vendor": "",
+            "score": 82,
+            "confidence": 0.82,
+            "impact": "none",
+            "rationale": "name contains diagnostics marker 'logging'",
+            "partition": "vendor",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.acme.crm.mobile",
+            "risk": "never",
+            "category": "user-app",
+            "vendor": "user",
+            "score": 0,
+            "confidence": 0.98,
+            "impact": "notable",
+            "rationale": "installed by the user via com.android.vending; disabling it would remove an app they chose to have",
+            "partition": "data",
+            "installer": "com.android.vending",
+            "enabled": true
+          },
+          {
+            "name": "com.smallvendor.notes",
+            "risk": "never",
+            "category": "user-app",
+            "vendor": "user",
+            "score": 0,
+            "confidence": 0.98,
+            "impact": "notable",
+            "rationale": "installed by the user via com.android.vending; disabling it would remove an app they chose to have",
+            "partition": "data",
+            "installer": "com.android.vending",
+            "enabled": true
+          },
+          {
+            "name": "com.indie.game.puzzle",
+            "risk": "never",
+            "category": "user-app",
+            "vendor": "user",
+            "score": 0,
+            "confidence": 0.98,
+            "impact": "notable",
+            "rationale": "installed by the user via com.android.vending; disabling it would remove an app they chose to have",
+            "partition": "data",
+            "installer": "com.android.vending",
+            "enabled": true
+          },
+          {
+            "name": "com.android.providers.media",
+            "risk": "never",
+            "category": "protected",
+            "vendor": "",
+            "score": 0,
+            "confidence": 0.99,
+            "impact": "notable",
+            "rationale": "core system component",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.google.android.gms",
+            "risk": "never",
+            "category": "protected",
+            "vendor": "",
+            "score": 0,
+            "confidence": 0.99,
+            "impact": "notable",
+            "rationale": "core system component",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.sec.android.app.launcher",
+            "risk": "never",
+            "category": "protected",
+            "vendor": "",
+            "score": 0,
+            "confidence": 0.99,
+            "impact": "notable",
+            "rationale": "core system component",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.unknownvendor.mystery",
+            "risk": "caution",
+            "category": "unknown-preload",
+            "vendor": "",
+            "score": 35,
+            "confidence": 0.3,
+            "impact": "notable",
+            "rationale": "preinstalled (system partition (system)) but not in the knowledge base; reported for review rather than disabled automatically",
+            "partition": "system",
+            "installer": null,
+            "enabled": true
+          },
+          {
+            "name": "com.somevendor.weirdthing",
+            "risk": "caution",
+            "category": "unknown-preload",
+            "vendor": "",
+            "score": 35,
+            "confidence": 0.3,
+            "impact": "notable",
+            "rationale": "preinstalled (system partition (product)) but not in the knowledge base; reported for review rather than disabled automatically",
+            "partition": "product",
+            "installer": null,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    "inspection": {
+      "legacy": {
+        "round_trips_total": 6,
+        "round_trips_devices": 1,
+        "round_trips_device_info": 4,
+        "round_trips_packages": 1,
+        "device_attributes_learned": 4,
+        "packages_learned": 11,
+        "facts_learned": 15,
+        "round_trips_per_fact": 0.4,
+        "knows_partition": false,
+        "knows_installer": false,
+        "knows_disabled_state": false
+      },
+      "new": {
+        "round_trips_total": 2,
+        "round_trips_devices": 1,
+        "round_trips_device_info": 0,
+        "round_trips_packages": 1,
+        "device_attributes_learned": 13,
+        "packages_learned": 154,
+        "facts_learned": 167,
+        "round_trips_per_fact": 0.012,
+        "knows_partition": true,
+        "knows_installer": true,
+        "knows_disabled_state": true,
+        "metrics": {
+          "round_trips": 2,
+          "device_commands": 7,
+          "batched_invocations": 1,
+          "batching_saving": 5,
+          "batching_efficiency": 0.7143,
+          "cache_hits": 0,
+          "cache_misses": 0,
+          "retries": 0,
+          "failures": 0,
+          "timeouts": 0,
+          "total_command_seconds": 1.0754
+        }
+      },
+      "round_trip_reduction_pct": 66.7,
+      "facts_gained": 152
+    },
+    "mechanism": {
+      "same_workload": {
+        "packages": 79,
+        "legacy": {
+          "round_trips": 84,
+          "device_commands": 84,
+          "round_trips_per_package": 1.063,
+          "applied": 170
+        },
+        "new": {
+          "round_trips": 21,
+          "device_commands": 21,
+          "round_trips_per_package": 0.2658
+        },
+        "new_batching_only": {
+          "round_trips": 10,
+          "round_trips_per_package": 0.1266
+        },
+        "reduction_pct": 75.0,
+        "reduction_pct_batching_only": 88.1,
+        "speedup_factor": 4.0,
+        "speedup_factor_batching_only": 8.4
+      },
+      "scaling": {
+        "chunk_size": 8,
+        "workers": 4,
+        "series": [
+          {
+            "packages": 4,
+            "legacy_round_trips": 4,
+            "new_round_trips": 1,
+            "legacy_per_package": 1.0,
+            "new_per_package": 0.25,
+            "speedup": 4.0,
+            "theoretical_new": 1
+          },
+          {
+            "packages": 8,
+            "legacy_round_trips": 8,
+            "new_round_trips": 1,
+            "legacy_per_package": 1.0,
+            "new_per_package": 0.125,
+            "speedup": 8.0,
+            "theoretical_new": 1
+          },
+          {
+            "packages": 16,
+            "legacy_round_trips": 16,
+            "new_round_trips": 2,
+            "legacy_per_package": 1.0,
+            "new_per_package": 0.125,
+            "speedup": 8.0,
+            "theoretical_new": 2
+          },
+          {
+            "packages": 32,
+            "legacy_round_trips": 32,
+            "new_round_trips": 4,
+            "legacy_per_package": 1.0,
+            "new_per_package": 0.125,
+            "speedup": 8.0,
+            "theoretical_new": 4
+          },
+          {
+            "packages": 64,
+            "legacy_round_trips": 64,
+            "new_round_trips": 8,
+            "legacy_per_package": 1.0,
+            "new_per_package": 0.125,
+            "speedup": 8.0,
+            "theoretical_new": 8
+          }
+        ]
+      }
+    },
+    "endtoend": {
+      "first_run": {
+        "legacy": {
+          "round_trips": 22,
+          "device_commands": 22,
+          "wall_seconds": 13.339,
+          "packages_targeted": 11,
+          "quality": {
+            "correctly_disabled": 19,
+            "harmfully_disabled": 3,
+            "still_enabled_but_should_be_disabled": 72
+          }
+        },
+        "new": {
+          "round_trips": 23,
+          "device_commands": 23,
+          "wall_seconds": 6.037,
+          "actions": 82,
+          "commands": 163,
+          "applied": 163,
+          "failed": 0,
+          "skipped": 75,
+          "reversible": false,
+          "metrics": {
+            "round_trips": 23,
+            "device_commands": 170,
+            "batched_invocations": 22,
+            "batching_saving": 147,
+            "batching_efficiency": 0.8647,
+            "cache_hits": 0,
+            "cache_misses": 0,
+            "retries": 0,
+            "failures": 0,
+            "timeouts": 0,
+            "total_command_seconds": 19.554
+          },
+          "quality": {
+            "correctly_disabled": 91,
+            "harmfully_disabled": 0,
+            "still_enabled_but_should_be_disabled": 0
+          }
+        },
+        "headline": {
+          "workloads_differ": true,
+          "legacy_packages_targeted": 11,
+          "new_actions_planned": 82,
+          "legacy_correctly_disabled": 19,
+          "new_correctly_disabled": 91,
+          "legacy_round_trips_per_correct": 1.158,
+          "new_round_trips_per_correct": 0.253,
+          "round_trip_cost_reduction_pct": 78.2,
+          "round_trip_cost_speedup": 4.58,
+          "legacy_ms_per_correct": 702.1,
+          "new_ms_per_correct": 66.3,
+          "wall_ms_per_correct_speedup": 10.58,
+          "caveat": "Raw round-trip totals (legacy 22 vs new 23) are not a like-for-like comparison: the new run performs 4.8x more correct work. The normalised figures above are the meaningful ones."
+        },
+        "legacy_projected_usb_seconds": 0.55,
+        "new_projected_usb_seconds": 0.57
+      },
+      "second_run": {
+        "legacy": {
+          "round_trips": 16,
+          "wall_seconds": 10.114,
+          "packages_targeted": 11,
+          "already_optimised": false
+        },
+        "new": {
+          "round_trips": 3,
+          "wall_seconds": 1.672,
+          "actions": 1,
+          "commands": 1,
+          "applied": 1,
+          "already_optimised": false
+        },
+        "round_trip_reduction_pct": 81.2,
+        "note": "Like-for-like: both implementations re-run against a device the first run already optimised, so the remaining work is identical."
+      },
+      "fps_diagnostic": {
+        "round_trips": 3,
+        "wall_seconds": 6.524,
+        "artificial_sleep_seconds": 4.8,
+        "note": "0.4s sleep per line x 12 lines, hard-coded, regardless of device speed"
+      },
+      "spawn_cost": {
+        "rounds": 20,
+        "direct_exec_ms": 547.6,
+        "through_host_shell_ms": 552.9,
+        "shell_overhead_ms": 5.3,
+        "note": "Per-invocation cost is dominated by interpreter startup in the simulator, not by the shell. Real adb is a native binary."
+      },
+      "round_trip_model": {
+        "usb_round_trip_ms": 25.0
+      }
+    },
+    "reliability": {
+      "legacy": {
+        "faults_injected": 3,
+        "failures_reported_as_failures": 0,
+        "claims_success": true,
+        "final_message": "=== Optimization sequence completed successfully! ===",
+        "packages_actually_disabled": 0,
+        "silent_failures": 3,
+        "exit_code": 0,
+        "note": "run_cmd() returns e.stderr on failure; the caller prints it under a '-> Disabled <pkg>:' label and never checks it"
+      },
+      "new": {
+        "faults_injected": 8,
+        "failures_reported_as_failures": 8,
+        "claims_success": false,
+        "failed_commands": 16,
+        "packages_actually_disabled": 0,
+        "silent_failures": 0,
+        "exit_code": 1,
+        "success_rate": 0.9018,
+        "detection_rate": 1.0
+      },
+      "summary": {
+        "legacy_detection_rate": 0.0,
+        "new_detection_rate": 1.0,
+        "legacy_silent_failures": 3,
+        "new_silent_failures": 0
+      },
+      "asymmetry_note": "The two sides are given different numbers of faults (3 vs 8) and this is inherent, not an artefact: the fault set covers 8 packages, but the legacy matcher only ever targets 11 packages, of which just 3 are in the fault set. It never touches the other 5, so it cannot be observed failing on them. The comparable figure is the detection rate, which is normalised by the number of faults each side was actually given."
+    },
+    "security": {
+      "proof_of_concept": {
+        "legacy": {
+          "payload": "com.facebook.evil& echo pwned>MARKER_3367e458.txt& rem",
+          "marker": "MARKER_3367e458.txt",
+          "package_flagged_as_bloat": true,
+          "command_built": "adb shell pm disable-user --user 0 com.facebook.evil& echo pwned>MARKER_3367e458.txt& rem",
+          "shell_used": true,
+          "injected_command_executed": true,
+          "marker_file_created": true,
+          "verdict": "VULNERABLE"
+        },
+        "new": {
+          "payload": "com.facebook.evil& echo pwned>MARKER.txt& rem",
+          "risk": "never",
+          "category": "invalid-identifier",
+          "rationale": "not a legal Android package identifier; refusing to build any command from it",
+          "would_generate_a_command": false,
+          "validator_rejected": true,
+          "shell_used": false,
+          "payloads_tested": 5,
+          "payloads_rejected": 5,
+          "verdict": "SAFE"
+        }
+      },
+      "static_analysis": {
+        "legacy": {
+          "files": 1,
+          "shell_true_occurrences": 2,
+          "subprocess_call_sites": 2,
+          "fstring_passed_to_subprocess": 0
+        },
+        "new": {
+          "files": 30,
+          "shell_true_occurrences": 0,
+          "subprocess_call_sites": 1,
+          "fstring_passed_to_subprocess": 0
+        }
+      }
+    },
+    "structure": {
+      "legacy": {
+        "files": 1,
+        "total_lines": 188,
+        "code_lines": 147,
+        "functions": 9,
+        "classes": 0,
+        "mean_function_length": 19.2,
+        "max_function_length": 50,
+        "mean_complexity": 3.22,
+        "max_complexity": 8,
+        "functions_over_complexity_10": 0,
+        "max_nesting_depth": 3,
+        "mean_nesting_depth": 1.33,
+        "functions_with_docstring_pct": 11.1,
+        "functions_with_parameters": 3,
+        "mean_annotation_ratio": 0.0,
+        "modules_with_docstring_pct": 0.0,
+        "test_functions": 0,
+        "test_files": 0
+      },
+      "new": {
+        "files": 30,
+        "total_lines": 3885,
+        "code_lines": 3099,
+        "functions": 189,
+        "classes": 42,
+        "mean_function_length": 11.0,
+        "max_function_length": 55,
+        "mean_complexity": 2.43,
+        "max_complexity": 8,
+        "functions_over_complexity_10": 0,
+        "max_nesting_depth": 3,
+        "mean_nesting_depth": 0.63,
+        "functions_with_docstring_pct": 29.1,
+        "functions_with_parameters": 188,
+        "mean_annotation_ratio": 0.52,
+        "modules_with_docstring_pct": 100.0,
+        "test_files": 10,
+        "test_functions": 162
+      },
+      "legacy_hotspots": [
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "main",
+          "line": 136,
+          "length": 50,
+          "complexity": 8,
+          "max_depth": 3,
+          "has_docstring": false,
+          "annotation_ratio": null
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "inspect_unneeded_packages",
+          "line": 41,
+          "length": 33,
+          "complexity": 7,
+          "max_depth": 2,
+          "has_docstring": false,
+          "annotation_ratio": null
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "run_fps_check",
+          "line": 75,
+          "length": 24,
+          "complexity": 4,
+          "max_depth": 3,
+          "has_docstring": false,
+          "annotation_ratio": null
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "fetch_device_info",
+          "line": 20,
+          "length": 20,
+          "complexity": 2,
+          "max_depth": 1,
+          "has_docstring": false,
+          "annotation_ratio": null
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "optimize_heavy",
+          "line": 110,
+          "length": 12,
+          "complexity": 2,
+          "max_depth": 1,
+          "has_docstring": false,
+          "annotation_ratio": 0.0
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "run_cmd",
+          "line": 5,
+          "length": 7,
+          "complexity": 2,
+          "max_depth": 2,
+          "has_docstring": true,
+          "annotation_ratio": 0.0
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "check_devices",
+          "line": 13,
+          "length": 6,
+          "complexity": 2,
+          "max_depth": 0,
+          "has_docstring": false,
+          "annotation_ratio": null
+        },
+        {
+          "file": "legacy\\Optimized.py",
+          "name": "optimize_aggressive",
+          "line": 123,
+          "length": 12,
+          "complexity": 1,
+          "max_depth": 0,
+          "has_docstring": false,
+          "annotation_ratio": 0.0
+        }
+      ],
+      "new_hotspots": [
+        {
+          "file": "src\\android_optimiser\\reporting\\report.py",
+          "name": "render_markdown",
+          "line": 66,
+          "length": 55,
+          "complexity": 8,
+          "max_depth": 2,
+          "has_docstring": false,
+          "annotation_ratio": 1.0
+        },
+        {
+          "file": "src\\android_optimiser\\cli.py",
+          "name": "cmd_restore",
+          "line": 268,
+          "length": 47,
+          "complexity": 8,
+          "max_depth": 1,
+          "has_docstring": false,
+          "annotation_ratio": 1.0
+        },
+        {
+          "file": "src\\android_optimiser\\planner\\planner.py",
+          "name": "plan",
+          "line": 86,
+          "length": 47,
+          "complexity": 8,
+          "max_depth": 1,
+          "has_docstring": false,
+          "annotation_ratio": 0.67
+        },
+        {
+          "file": "src\\android_optimiser\\core\\adb.py",
+          "name": "_invoke",
+          "line": 224,
+          "length": 39,
+          "complexity": 8,
+          "max_depth": 2,
+          "has_docstring": true,
+          "annotation_ratio": 0.8
+        },
+        {
+          "file": "src\\android_optimiser\\reporting\\console.py",
+          "name": "render_execution",
+          "line": 160,
+          "length": 39,
+          "complexity": 8,
+          "max_depth": 3,
+          "has_docstring": false,
+          "annotation_ratio": 1.0
+        },
+        {
+          "file": "src\\android_optimiser\\actions\\packages.py",
+          "name": "build_package_actions",
+          "line": 29,
+          "length": 54,
+          "complexity": 7,
+          "max_depth": 2,
+          "has_docstring": true,
+          "annotation_ratio": 1.0
+        },
+        {
+          "file": "src\\android_optimiser\\reporting\\console.py",
+          "name": "render_classification",
+          "line": 100,
+          "length": 30,
+          "complexity": 7,
+          "max_depth": 2,
+          "has_docstring": false,
+          "annotation_ratio": 1.0
+        },
+        {
+          "file": "src\\android_optimiser\\reporting\\console.py",
+          "name": "render_plan",
+          "line": 132,
+          "length": 26,
+          "complexity": 7,
+          "max_depth": 3,
+          "has_docstring": false,
+          "annotation_ratio": 1.0
+        }
+      ],
+      "new_module_breakdown": [
+        {
+          "path": "src\\android_optimiser\\__init__.py",
+          "lines": 30,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\__main__.py",
+          "lines": 8,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\__init__.py",
+          "lines": 5,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\animation.py",
+          "lines": 74,
+          "functions": 1
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\base.py",
+          "lines": 74,
+          "functions": 5
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\packages.py",
+          "lines": 110,
+          "functions": 2
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\power.py",
+          "lines": 39,
+          "functions": 1
+        },
+        {
+          "path": "src\\android_optimiser\\actions\\storage.py",
+          "lines": 76,
+          "functions": 1
+        },
+        {
+          "path": "src\\android_optimiser\\analysis\\__init__.py",
+          "lines": 6,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\analysis\\classifier.py",
+          "lines": 235,
+          "functions": 13
+        },
+        {
+          "path": "src\\android_optimiser\\analysis\\inspector.py",
+          "lines": 187,
+          "functions": 9
+        },
+        {
+          "path": "src\\android_optimiser\\analysis\\knowledge.py",
+          "lines": 385,
+          "functions": 5
+        },
+        {
+          "path": "src\\android_optimiser\\cli.py",
+          "lines": 407,
+          "functions": 16
+        },
+        {
+          "path": "src\\android_optimiser\\config.py",
+          "lines": 97,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\core\\__init__.py",
+          "lines": 21,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\core\\adb.py",
+          "lines": 495,
+          "functions": 34
+        },
+        {
+          "path": "src\\android_optimiser\\core\\device.py",
+          "lines": 115,
+          "functions": 8
+        },
+        {
+          "path": "src\\android_optimiser\\core\\metrics.py",
+          "lines": 123,
+          "functions": 13
+        },
+        {
+          "path": "src\\android_optimiser\\core\\transport.py",
+          "lines": 157,
+          "functions": 11
+        },
+        {
+          "path": "src\\android_optimiser\\domain.py",
+          "lines": 188,
+          "functions": 15
+        },
+        {
+          "path": "src\\android_optimiser\\exceptions.py",
+          "lines": 62,
+          "functions": 3
+        },
+        {
+          "path": "src\\android_optimiser\\executor\\__init__.py",
+          "lines": 14,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\executor\\executor.py",
+          "lines": 238,
+          "functions": 11
+        },
+        {
+          "path": "src\\android_optimiser\\executor\\rollback.py",
+          "lines": 124,
+          "functions": 8
+        },
+        {
+          "path": "src\\android_optimiser\\planner\\__init__.py",
+          "lines": 16,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\planner\\planner.py",
+          "lines": 167,
+          "functions": 10
+        },
+        {
+          "path": "src\\android_optimiser\\planner\\profiles.py",
+          "lines": 91,
+          "functions": 2
+        },
+        {
+          "path": "src\\android_optimiser\\reporting\\__init__.py",
+          "lines": 5,
+          "functions": 0
+        },
+        {
+          "path": "src\\android_optimiser\\reporting\\console.py",
+          "lines": 216,
+          "functions": 17
+        },
+        {
+          "path": "src\\android_optimiser\\reporting\\report.py",
+          "lines": 120,
+          "functions": 4
+        }
+      ],
+      "dependencies": {
+        "legacy": {
+          "imports": [
+            "subprocess",
+            "sys",
+            "time"
+          ],
+          "third_party": []
+        },
+        "new": {
+          "imports": [
+            "__future__",
+            "argparse",
+            "concurrent",
+            "dataclasses",
+            "datetime",
+            "enum",
+            "json",
+            "os",
+            "pathlib",
+            "re",
+            "shlex",
+            "shutil",
+            "subprocess",
+            "sys",
+            "threading",
+            "time",
+            "typing"
+          ],
+          "third_party": []
+        }
+      }
+    }
+  },
+  "tests": {
+    "available": true,
+    "tests_collected": 253,
+    "tests_passed": 253,
+    "line_coverage_pct": 89.0
+  },
+  "failed": []
+}

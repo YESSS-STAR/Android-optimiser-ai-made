@@ -1,0 +1,4 @@
+#!/bin/sh
+# Simulated adb shim for POSIX shells. Put this directory on PATH.
+PY="${FAKE_ADB_PYTHON:-python3}"
+exec "$PY" -S "$(dirname "$0")/adb_sim.py" "$@"

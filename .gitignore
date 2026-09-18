@@ -1,0 +1,33 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Test / coverage artefacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Benchmark run artefacts
+#
+# `results/benchmarks.json` and `results/report.html` are tracked: they are the
+# evidence, and regenerating them requires a multi-minute run.
+# Everything else under results/ is per-run scratch.
+benchmarks/results/_*
+benchmarks/results/raw/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

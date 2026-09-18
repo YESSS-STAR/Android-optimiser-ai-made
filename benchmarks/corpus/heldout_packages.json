@@ -1,0 +1,39 @@
+{
+  "description": "Held-out package corpus. No package labelled safe:true appears verbatim in src/android_optimiser/analysis/knowledge.py, and the entries marked 'unknown to the KB' match no vendor prefix rule either. They test whether the classifier's vendor-family rules, telemetry patterns and structural signals generalise to handsets and firmware the knowledge base has never seen, rather than relying on per-package memorisation. Three entries deliberately name protected packages: a protection list necessarily has to name what it protects, and those entries test that the classifier does not over-reach.",
+  "labels": {
+    "safe": "Disabling this package is correct and low-risk.",
+    "unsafe": "Disabling this package is wrong: either it breaks the device, or it removes an app the user installed on purpose."
+  },
+  "packages": [
+    {"name": "com.miui.analytics", "partition": "system", "installer": null, "safe": true, "tests": "Xiaomi vendor family"},
+    {"name": "com.miui.msa.global", "partition": "system", "installer": null, "safe": true, "tests": "Xiaomi vendor family"},
+    {"name": "com.xiaomi.mipicks", "partition": "system", "installer": null, "safe": true, "tests": "Xiaomi vendor family"},
+    {"name": "com.oneplus.gamespace", "partition": "system", "installer": null, "safe": true, "tests": "OnePlus vendor family"},
+    {"name": "com.oppo.quicksearchbox", "partition": "system", "installer": null, "safe": true, "tests": "OPPO vendor family"},
+    {"name": "com.vivo.appstore", "partition": "system", "installer": null, "safe": true, "tests": "vivo vendor family"},
+    {"name": "com.motorola.genie", "partition": "system", "installer": null, "safe": true, "tests": "Motorola vendor family"},
+    {"name": "com.huawei.hwid", "partition": "system", "installer": null, "safe": true, "tests": "Huawei vendor family"},
+    {"name": "com.hihonor.id", "partition": "system", "installer": null, "safe": true, "tests": "Honor vendor family"},
+    {"name": "com.lge.signboard", "partition": "system", "installer": null, "safe": true, "tests": "LG vendor family"},
+    {"name": "com.sonyericsson.trackid", "partition": "system", "installer": null, "safe": true, "tests": "Sony vendor family"},
+    {"name": "com.transsion.phoenix", "partition": "system", "installer": null, "safe": true, "tests": "Transsion vendor family"},
+
+    {"name": "com.acme.widget.telemetry", "partition": "system", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+    {"name": "com.foo.bar.analytics", "partition": "system", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+    {"name": "com.baz.qux.diagmon", "partition": "system", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+    {"name": "com.corp.metrics.crashreport", "partition": "product", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+    {"name": "com.example.statsd.service", "partition": "system", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+    {"name": "com.vendor.logging.agent", "partition": "vendor", "installer": null, "safe": true, "tests": "telemetry token, vendor unknown to the KB"},
+
+    {"name": "com.acme.crm.mobile", "partition": "data", "installer": "com.android.vending", "safe": false, "tests": "user-installed app from an unknown vendor"},
+    {"name": "com.smallvendor.notes", "partition": "data", "installer": "com.android.vending", "safe": false, "tests": "user-installed app from an unknown vendor"},
+    {"name": "com.indie.game.puzzle", "partition": "data", "installer": "com.android.vending", "safe": false, "tests": "user-installed app whose name collides with a legacy keyword"},
+
+    {"name": "com.android.providers.media", "partition": "system", "installer": null, "safe": false, "tests": "protected namespace"},
+    {"name": "com.google.android.gms", "partition": "system", "installer": null, "safe": false, "tests": "protected exact name"},
+    {"name": "com.sec.android.app.launcher", "partition": "system", "installer": null, "safe": false, "tests": "protected exact name"},
+
+    {"name": "com.unknownvendor.mystery", "partition": "system", "installer": null, "safe": false, "tests": "unknown system package: must not be claimed as safe"},
+    {"name": "com.somevendor.weirdthing", "partition": "product", "installer": null, "safe": false, "tests": "unknown product package: must not be claimed as safe"}
+  ]
+}
